@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /account
+Disallow: /checkout
+Disallow: /confirmation
+Disallow: /manage
+Disallow: /reset-password
+Disallow: /forgot-password
+
+Sitemap: https://rove.rent/sitemap.xml

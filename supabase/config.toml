@@ -1,0 +1,29 @@
+# Rove — Supabase CLI configuration
+# Run: supabase link --project-ref <ref>
+#      supabase db push
+#      supabase functions deploy razorpay-order
+#      supabase functions deploy razorpay-verify
+#      supabase functions deploy razorpay-refund
+
+project_id = "rove"
+
+# Payment functions must be callable by guests too. Razorpay signatures and
+# booking ownership/email checks inside the functions provide the authorisation,
+# so do not require a Supabase JWT at the gateway.
+[functions.razorpay-order]
+verify_jwt = false
+
+[functions.razorpay-verify]
+verify_jwt = false
+
+[functions.razorpay-refund]
+verify_jwt = false
+
+# Server-to-server: Razorpay signs webhooks with a dedicated secret. Never
+# require a Supabase JWT on a callback endpoint.
+[functions.razorpay-webhook]
+verify_jwt = false
+
+# Internal dispatcher; invoked by the scheduler, not by browsers.
+[functions.notify]
+verify_jwt = false

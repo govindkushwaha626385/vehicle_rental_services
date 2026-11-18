@@ -1,0 +1,33 @@
+{
+  "name": "Rove Rentals",
+  "short_name": "Rove",
+  "description": "Premium self-drive car and bike rentals across India. Transparent pricing, instant confirmation and flexible cancellation.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#0B0F0C",
+  "background_color": "#F6F3EA",
+  "lang": "en",
+  "categories": ["travel", "cars", "booking"],
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

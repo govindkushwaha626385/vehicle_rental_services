@@ -1,0 +1,33 @@
+{
+  "name": "rove-rentals",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Rove — premium vehicle rentals powered by Supabase and Razorpay.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test:demo": "node scripts/test-demo.mjs",
+    "test:sql": "bash scripts/validate-sql.sh",
+    "check": "npm run test:demo && npm run test:sql && npm run build && npm run check:undefined",
+    "check:undefined": "node scripts/check-undefined.mjs --strict",
+    "seed:users": "node --env-file=.env scripts/seed-demo-users.mjs"
+  },
+  "engines": {
+    "node": ">=22.5"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.118.0",
+    "lucide-react": "^0.468.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.1.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "tailwindcss": "^4.0.0",
+    "vite": "^6.0.0"
+  }
+}
